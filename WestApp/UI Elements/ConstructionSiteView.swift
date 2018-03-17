@@ -25,6 +25,8 @@ class ConstructionSiteView: UIView {
   private var infoLabel: UILabel! {
     didSet {
       infoLabel.translatesAutoresizingMaskIntoConstraints = false
+      infoLabel.numberOfLines = 0
+      infoLabel.lineBreakMode = .byWordWrapping
     }
   }
   
@@ -70,6 +72,7 @@ class ConstructionSiteView: UIView {
     
     imageView?.image = constructionSite.image
     streetNameLabel?.text = constructionSite.adress.streetName + " " + constructionSite.adress.streetNumber
+    infoLabel.text = constructionSite.infoText
     
     constraint()
   }
@@ -78,8 +81,10 @@ class ConstructionSiteView: UIView {
     
     var constraints: [NSLayoutConstraint] = []
     
-    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[imageView(120)]-[streetNameLabel]-|", metrics: nil, views: views)
-    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[imageView(120)]-|", metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[imageView(120)]-[streetNameLabel]-|", options: [.alignAllTop], metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[imageView]-[infoLabel]-|", metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[imageView]-|", metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[streetNameLabel(20)]-[infoLabel]-|", metrics: nil, views: views)
     
     NSLayoutConstraint.activate(constraints)
   }

@@ -11,6 +11,7 @@ struct ConstructionSite {
   
   var adress: Adress
   var image: UIImage
+  var infoText: String
   
   struct Adress {
     var streetName: String

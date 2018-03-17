@@ -44,7 +44,11 @@ class StartViewController: UIViewController {
     let adress = ConstructionSite.Adress(streetName: "Teststrasse", streetNumber: "2b", zipCode: "54478", cityName: "Essen")
     let image = UIImage(named: "construction site")!
     
-    return ConstructionSite(adress: adress, image: image)
+    let loremIpsum = """
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed d
+    """
+    
+    return ConstructionSite(adress: adress, image: image, infoText: loremIpsum)
   }
   
   // MARK: - Lifecycle
