@@ -8,7 +8,26 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+  
+  @IBOutlet weak var presenceButton: UIButton! {
+    didSet {
+      
+    }
+  }
+  
+  @IBOutlet weak var photoDocumentationButton: UIButton! {
+    didSet {
+      
+    }
+  }
+  
+  @IBOutlet weak var contactButton: UIButton! {
+    didSet {
+      
+    }
+  }
+  
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.

@@ -15,6 +15,8 @@
 		C720F388205D312B008B4BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C720F386205D312B008B4BC1 /* LaunchScreen.storyboard */; };
 		C720F393205D312B008B4BC1 /* WestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F392205D312B008B4BC1 /* WestAppTests.swift */; };
 		C720F39E205D312B008B4BC1 /* WestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F39D205D312B008B4BC1 /* WestAppUITests.swift */; };
+		C720F3AC205D34CE008B4BC1 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3AB205D34CE008B4BC1 /* Configuration.swift */; };
+		C720F3AF205D3603008B4BC1 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3AE205D3603008B4BC1 /* UIColor+Custom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		C720F399205D312B008B4BC1 /* WestAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WestAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C720F39D205D312B008B4BC1 /* WestAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WestAppUITests.swift; sourceTree = "<group>"; };
 		C720F39F205D312B008B4BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C720F3AB205D34CE008B4BC1 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		C720F3AE205D3603008B4BC1 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				C720F37A205D312B008B4BC1 /* WestApp */,
+				C720F384205D312B008B4BC1 /* Assets.xcassets */,
+				C720F389205D312B008B4BC1 /* Info.plist */,
 				C720F391205D312B008B4BC1 /* WestAppTests */,
 				C720F39C205D312B008B4BC1 /* WestAppUITests */,
 				C720F379205D312B008B4BC1 /* Products */,
@@ -99,13 +105,11 @@
 		C720F37A205D312B008B4BC1 /* WestApp */ = {
 			isa = PBXGroup;
 			children = (
-				C720F37B205D312B008B4BC1 /* AppDelegate.swift */,
-				C720F37D205D312B008B4BC1 /* FirstViewController.swift */,
+				C720F3B0205D3728008B4BC1 /* Start */,
 				C720F37F205D312B008B4BC1 /* SecondViewController.swift */,
-				C720F381205D312B008B4BC1 /* Main.storyboard */,
-				C720F384205D312B008B4BC1 /* Assets.xcassets */,
-				C720F386205D312B008B4BC1 /* LaunchScreen.storyboard */,
-				C720F389205D312B008B4BC1 /* Info.plist */,
+				C720F3AB205D34CE008B4BC1 /* Configuration.swift */,
+				C720F3B1205D373B008B4BC1 /* Supporting files */,
+				C720F3AD205D35E9008B4BC1 /* Extensions */,
 			);
 			path = WestApp;
 			sourceTree = "<group>";
@@ -126,6 +130,32 @@
 				C720F39F205D312B008B4BC1 /* Info.plist */,
 			);
 			path = WestAppUITests;
+			sourceTree = "<group>";
+		};
+		C720F3AD205D35E9008B4BC1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C720F3AE205D3603008B4BC1 /* UIColor+Custom.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C720F3B0205D3728008B4BC1 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				C720F37D205D312B008B4BC1 /* FirstViewController.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		C720F3B1205D373B008B4BC1 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				C720F381205D312B008B4BC1 /* Main.storyboard */,
+				C720F37B205D312B008B4BC1 /* AppDelegate.swift */,
+				C720F386205D312B008B4BC1 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +225,7 @@
 				TargetAttributes = {
 					C720F377205D312B008B4BC1 = {
 						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					C720F38D205D312B008B4BC1 = {
 						CreatedOnToolsVersion = 9.2;
@@ -263,6 +293,8 @@
 			files = (
 				C720F380205D312B008B4BC1 /* SecondViewController.swift in Sources */,
 				C720F37C205D312B008B4BC1 /* AppDelegate.swift in Sources */,
+				C720F3AC205D34CE008B4BC1 /* Configuration.swift in Sources */,
+				C720F3AF205D3603008B4BC1 /* UIColor+Custom.swift in Sources */,
 				C720F37E205D312B008B4BC1 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,11 +461,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hackathon.WestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -443,11 +477,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = hackathon.WestApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
