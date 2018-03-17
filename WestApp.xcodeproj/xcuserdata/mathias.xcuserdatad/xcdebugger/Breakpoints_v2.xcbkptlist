@@ -20,7 +20,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WestApp/Start/StartViewController.swift"
-            timestampString = "543008947.608624"
+            timestampString = "543011635.2121741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -36,7 +36,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "WestApp/Login/LoginViewController.swift"
-            timestampString = "543008947.608988"
+            timestampString = "543011635.2124521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "41"
@@ -61,7 +61,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "WestApp/Login/LoginViewController.swift"
-            timestampString = "543008947.6091909"
+            timestampString = "543011635.212651"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -86,7 +86,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "Yes"
             filePath = "WestApp/UI Elements/ConstructionSiteView.swift"
-            timestampString = "543008947.609255"
+            timestampString = "543011635.212713"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -114,6 +114,22 @@
             moduleName = "">
             <Locations>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WestApp/Report/ReportSelectionViewController.swift"
+            timestampString = "543011635.21289"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

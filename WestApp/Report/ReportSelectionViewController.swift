@@ -63,7 +63,45 @@ class ReportSelectionViewController: UIViewController {
   
   // MARK: - Functions
   
-  private func openImagePicker() {
+  private func inputSelection() {
+    
+    let alert = UIAlertController(title: "Bild verwenden von", message: "", preferredStyle: .alert)
+    
+
+    let cameraAction = UIAlertAction(title: "Kamera", style: .default, handler: { _ in
+      self.openCamera()
+    })
+    
+    let galeryAction = UIAlertAction(title: "Gallerie", style: .default, handler: { _ in
+      self.openGallery()
+    })
+    
+    let cancelAction = UIAlertAction(title: "Abbrechen", style: .cancel, handler: { _ in
+      self.openGallery()
+    })
+    
+    alert.addAction(cameraAction)
+    alert.addAction(galeryAction)
+    alert.addAction(cancelAction)
+
+    self.present(alert, animated: true)
+  }
+  
+  private func openCamera() {
+    
+    if UIImagePickerController.isSourceTypeAvailable(.camera) {
+      
+      let imagePicker = UIImagePickerController()
+      imagePicker.delegate = self
+      imagePicker.sourceType = .camera
+      imagePicker.allowsEditing = false
+      
+      self.present(imagePicker, animated: true, completion: nil)
+    }
+  }
+  
+  private func openGallery() {
+    
     if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
       
       let imagePicker = UIImagePickerController()
@@ -80,25 +118,25 @@ class ReportSelectionViewController: UIViewController {
   @IBAction func reportProgress(_ sender: Any) {
     selectedReportType = .progress
     
-    openImagePicker()
+    inputSelection()
   }
   
   @IBAction func needTechnican(_ sender: Any) {
     selectedReportType = .technican
     
-    openImagePicker()
+    inputSelection()
   }
   
   @IBAction func needSurveyor(_ sender: Any) {
     selectedReportType = .surveyor
     
-    openImagePicker()
+    inputSelection()
   }
   
   @IBAction func finishedContructionSite(_ sender: Any) {
     selectedReportType = .finished
     
-    openImagePicker()
+    inputSelection()
   }
 }
 
@@ -106,17 +144,17 @@ class ReportSelectionViewController: UIViewController {
 
 extension ReportSelectionViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+  @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     
     if let photo = info["UIImagePickerControllerEditedImage"] as? UIImage {
-      self.photo = photo
+       self.photo = photo
     } else {
       print("Something went wrong")
     }
     
     self.dismiss(animated: true, completion: {
-      
-//      self.performSegue(withIdentifier: "openReportForm", sender: nil)
+
+      self.performSegue(withIdentifier: "openReportForm", sender: nil)
     })
   }
 }
