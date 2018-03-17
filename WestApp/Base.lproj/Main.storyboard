@@ -45,11 +45,11 @@
                                             <action selector="openLoginViewController:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Rzg-h1-xF9"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXM-9W-UhM">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXM-9W-UhM" userLabel="Report Button">
                                         <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
                                         <state key="normal" title="Photo Documentation Button"/>
                                         <connections>
-                                            <action selector="openPhotoLibraryButtonWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iad-od-VKh"/>
+                                            <action selector="openReportViewController:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qRv-Wn-DfJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-9S-SSZ">
@@ -75,9 +75,10 @@
                     <navigationItem key="navigationItem" id="1ni-EN-GPE"/>
                     <connections>
                         <outlet property="contactButton" destination="IdX-9S-SSZ" id="eAD-JP-60Z"/>
-                        <outlet property="photoDocumentationButton" destination="WXM-9W-UhM" id="cTs-BB-Gfo"/>
+                        <outlet property="photoDocumentationButton" destination="WXM-9W-UhM" id="WPb-MM-TVN"/>
                         <outlet property="presenceButton" destination="c2o-A7-YcQ" id="4de-8v-VZJ"/>
                         <segue destination="VYe-v1-om3" kind="show" identifier="openLoginViewController" id="M7Y-zp-DUI"/>
+                        <segue destination="jGx-th-YUN" kind="show" identifier="openReportViewController" id="8Zd-RJ-Zny"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -142,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aZ-Kc-KPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2606" y="-999"/>
+            <point key="canvasLocation" x="2750" y="-1151"/>
         </scene>
         <!--Contact View Controller-->
         <scene sceneID="Eez-sw-K05">
@@ -170,7 +171,55 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oP-Hu-Cqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2612" y="-229"/>
+            <point key="canvasLocation" x="2750" y="298"/>
+        </scene>
+        <!--Report View Controller-->
+        <scene sceneID="EKF-aT-H6Z">
+            <objects>
+                <viewController id="jGx-th-YUN" customClass="ReportViewController" customModule="WestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kq4-hm-Ci6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vZj-Xg-n41">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFN-lG-lGZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBg-rF-mY6">
+                                        <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQf-0l-Fpf">
+                                        <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EQf-0l-Fpf" firstAttribute="leading" secondItem="vZj-Xg-n41" secondAttribute="leading" id="14X-Dc-Zyf"/>
+                                    <constraint firstItem="RBg-rF-mY6" firstAttribute="leading" secondItem="vZj-Xg-n41" secondAttribute="leading" id="Ca8-Dr-Wjm"/>
+                                    <constraint firstAttribute="trailing" secondItem="EQf-0l-Fpf" secondAttribute="trailing" id="GkC-SA-Ot8"/>
+                                    <constraint firstItem="GFN-lG-lGZ" firstAttribute="leading" secondItem="vZj-Xg-n41" secondAttribute="leading" id="ZfY-5l-zdW"/>
+                                    <constraint firstAttribute="trailing" secondItem="RBg-rF-mY6" secondAttribute="trailing" id="ceL-DB-aJ5"/>
+                                    <constraint firstAttribute="trailing" secondItem="GFN-lG-lGZ" secondAttribute="trailing" id="tTm-mt-ljM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vZj-Xg-n41" firstAttribute="top" secondItem="of3-cs-yAu" secondAttribute="top" id="6kK-JR-uYT"/>
+                            <constraint firstItem="of3-cs-yAu" firstAttribute="bottom" secondItem="vZj-Xg-n41" secondAttribute="bottom" id="6ly-Ib-AlM"/>
+                            <constraint firstItem="of3-cs-yAu" firstAttribute="trailing" secondItem="vZj-Xg-n41" secondAttribute="trailing" id="We8-8J-qJj"/>
+                            <constraint firstItem="vZj-Xg-n41" firstAttribute="leading" secondItem="of3-cs-yAu" secondAttribute="leading" id="bvj-Cf-ILd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="of3-cs-yAu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rov-AT-BrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2751" y="-461"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

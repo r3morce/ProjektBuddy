@@ -72,8 +72,6 @@ class StartViewController: UIViewController {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
-    print("segue")
-    
     if segue.identifier == "openLoginViewController", let loginViewController = segue.destination as? LoginViewController {
       loginViewController.constructionSite = currentConstructionSite
     }
@@ -86,6 +84,9 @@ class StartViewController: UIViewController {
     performSegue(withIdentifier: "openLoginViewController", sender: nil)
   }
   
+  @IBAction func openReportViewController(_ sender: Any) {
+    performSegue(withIdentifier: "openReportViewController", sender: nil)
+  }
   
   @IBAction func openPhotoLibraryButton(sender: AnyObject) {
     if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
