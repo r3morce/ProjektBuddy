@@ -13,19 +13,25 @@ class StartViewController: UIViewController {
   
   @IBOutlet weak var presenceButton: UIButton! {
     didSet {
-      
+      presenceButton.titleLabel?.font = Configuration.Fonts.button
+      presenceButton.backgroundColor = Configuration.Colors.yellow
+      presenceButton.setTitleColor(Configuration.Colors.white, for: .normal)
     }
   }
   
   @IBOutlet weak var photoDocumentationButton: UIButton! {
     didSet {
-      
+      photoDocumentationButton.titleLabel?.font = Configuration.Fonts.button
+      photoDocumentationButton.backgroundColor = Configuration.Colors.purple
+      photoDocumentationButton.setTitleColor(Configuration.Colors.white, for: .normal)
     }
   }
   
   @IBOutlet weak var contactButton: UIButton! {
     didSet {
-      
+      contactButton.titleLabel?.font = Configuration.Fonts.button
+      contactButton.backgroundColor = Configuration.Colors.indigo
+      contactButton.setTitleColor(Configuration.Colors.white, for: .normal)
     }
   }
   
