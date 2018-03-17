@@ -10,6 +10,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Item-->
+        <scene sceneID="DPS-Pp-LDt">
+            <objects>
+                <navigationController id="fXh-Dl-hzJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="UyQ-H2-d8X"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Smv-WM-Und">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="l8S-JI-AAF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9eP-Sk-x7o" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-461"/>
+        </scene>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
@@ -19,21 +36,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cl9-xN-phr">
-                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-A7-YcQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
                                         <state key="normal" title="Presence Button"/>
+                                        <connections>
+                                            <action selector="openLoginViewController:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Rzg-h1-xF9"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXM-9W-UhM">
-                                        <rect key="frame" x="0.0" y="199.5" width="375" height="199"/>
+                                        <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
                                         <state key="normal" title="Photo Documentation Button"/>
                                         <connections>
                                             <action selector="openPhotoLibraryButtonWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iad-od-VKh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-9S-SSZ">
-                                        <rect key="frame" x="0.0" y="398.5" width="375" height="199.5"/>
+                                        <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
                                         <state key="normal" title="Contact Button"/>
                                     </button>
                                 </subviews>
@@ -41,23 +61,57 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cl9-xN-phr" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="bFR-Cb-65Z"/>
                             <constraint firstItem="cl9-xN-phr" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="csi-sX-j8d"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="cl9-xN-phr" secondAttribute="trailing" id="d9a-3h-IOE"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="cl9-xN-phr" secondAttribute="bottom" id="kvh-oF-ATH"/>
+                            <constraint firstItem="cl9-xN-phr" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="vns-1x-31F"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="1ni-EN-GPE"/>
                     <connections>
                         <outlet property="contactButton" destination="IdX-9S-SSZ" id="eAD-JP-60Z"/>
                         <outlet property="photoDocumentationButton" destination="WXM-9W-UhM" id="cTs-BB-Gfo"/>
                         <outlet property="presenceButton" destination="c2o-A7-YcQ" id="4de-8v-VZJ"/>
+                        <segue destination="VYe-v1-om3" kind="show" identifier="openLoginViewController" id="M7Y-zp-DUI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="1593" y="-433"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="2XV-9p-YmO">
+            <objects>
+                <viewController id="VYe-v1-om3" customClass="LoginViewController" customModule="WestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0yl-UM-HAW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQK-4z-mNo">
+                                <rect key="frame" x="8" y="72" width="359" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="2k2-Lq-wwv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vQK-4z-mNo" firstAttribute="leading" secondItem="ITI-vO-HMU" secondAttribute="leading" constant="8" id="0WY-mL-wcv"/>
+                            <constraint firstItem="vQK-4z-mNo" firstAttribute="top" secondItem="ITI-vO-HMU" secondAttribute="top" constant="8" id="5YG-JP-iha"/>
+                            <constraint firstItem="ITI-vO-HMU" firstAttribute="trailing" secondItem="vQK-4z-mNo" secondAttribute="trailing" constant="8" id="Pjg-QY-Vnc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ITI-vO-HMU"/>
+                    </view>
+                    <connections>
+                        <outlet property="constructionSiteContainerView" destination="vQK-4z-mNo" id="CqJ-st-CNs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8aZ-Kc-KPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2352.8000000000002" y="-433.13343328335833"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -106,7 +160,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="fXh-Dl-hzJ" kind="relationship" relationship="viewControllers" id="4FY-2X-Kob"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
@@ -116,7 +170,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="first" width="68" height="68"/>
+        <image name="second" width="67" height="64"/>
     </resources>
 </document>

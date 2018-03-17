@@ -39,6 +39,14 @@ class StartViewController: UIViewController {
   
   var photos: [UIImage] = []
   
+  var currentConstructionSite: ConstructionSite {
+    
+    let adress = ConstructionSite.Adress(streetName: "Teststrasse", streetNumber: "2b", zipCode: "54478", cityName: "Essen")
+    let image = UIImage(named: "construction site")!
+    
+    return ConstructionSite(adress: adress, image: image)
+  }
+  
   // MARK: - Lifecycle
   
   override func viewDidLoad() {
@@ -51,7 +59,24 @@ class StartViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  // MARK: - Functions
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    print("segue")
+    
+    if segue.identifier == "openLoginViewController", let loginViewController = segue.destination as? LoginViewController {
+      loginViewController.constructionSite = currentConstructionSite
+    }
+  }
+  
   // MARK: - IBActions
+  
+  
+  @IBAction func openLoginViewController(_ sender: Any) {
+    performSegue(withIdentifier: "openLoginViewController", sender: nil)
+  }
+  
   
   @IBAction func openPhotoLibraryButton(sender: AnyObject) {
     if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
@@ -66,7 +91,7 @@ class StartViewController: UIViewController {
   }
 }
 
-// MARK: -
+// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
 
 extension StartViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   

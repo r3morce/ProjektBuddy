@@ -11,12 +11,15 @@
 		C720F37E205D312B008B4BC1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F37D205D312B008B4BC1 /* StartViewController.swift */; };
 		C720F380205D312B008B4BC1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F37F205D312B008B4BC1 /* SecondViewController.swift */; };
 		C720F383205D312B008B4BC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C720F381205D312B008B4BC1 /* Main.storyboard */; };
-		C720F385205D312B008B4BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C720F384205D312B008B4BC1 /* Assets.xcassets */; };
 		C720F388205D312B008B4BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C720F386205D312B008B4BC1 /* LaunchScreen.storyboard */; };
 		C720F393205D312B008B4BC1 /* WestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F392205D312B008B4BC1 /* WestAppTests.swift */; };
 		C720F39E205D312B008B4BC1 /* WestAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F39D205D312B008B4BC1 /* WestAppUITests.swift */; };
 		C720F3AC205D34CE008B4BC1 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3AB205D34CE008B4BC1 /* Configuration.swift */; };
 		C720F3AF205D3603008B4BC1 /* UIColor+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3AE205D3603008B4BC1 /* UIColor+Custom.swift */; };
+		C720F3B4205D61AE008B4BC1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3B3205D61AE008B4BC1 /* LoginViewController.swift */; };
+		C720F3B7205D6282008B4BC1 /* ConstructionSiteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3B6205D6282008B4BC1 /* ConstructionSiteView.swift */; };
+		C720F3BA205D62B7008B4BC1 /* ConstructionSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3B9205D62B7008B4BC1 /* ConstructionSite.swift */; };
+		C720F3BC205D6CEF008B4BC1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C720F3BB205D6CEF008B4BC1 /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +45,6 @@
 		C720F37D205D312B008B4BC1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C720F37F205D312B008B4BC1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C720F382205D312B008B4BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C720F384205D312B008B4BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C720F387205D312B008B4BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C720F389205D312B008B4BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C720F38E205D312B008B4BC1 /* WestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +55,10 @@
 		C720F39F205D312B008B4BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C720F3AB205D34CE008B4BC1 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		C720F3AE205D3603008B4BC1 /* UIColor+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Custom.swift"; sourceTree = "<group>"; };
+		C720F3B3205D61AE008B4BC1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C720F3B6205D6282008B4BC1 /* ConstructionSiteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructionSiteView.swift; sourceTree = "<group>"; };
+		C720F3B9205D62B7008B4BC1 /* ConstructionSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructionSite.swift; sourceTree = "<group>"; };
+		C720F3BB205D6CEF008B4BC1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +92,6 @@
 				C720F37A205D312B008B4BC1 /* WestApp */,
 				C720F3AD205D35E9008B4BC1 /* Extensions */,
 				C720F3B1205D373B008B4BC1 /* Supporting files */,
-				C720F384205D312B008B4BC1 /* Assets.xcassets */,
 				C720F391205D312B008B4BC1 /* WestAppTests */,
 				C720F39C205D312B008B4BC1 /* WestAppUITests */,
 				C720F379205D312B008B4BC1 /* Products */,
@@ -106,6 +111,10 @@
 		C720F37A205D312B008B4BC1 /* WestApp */ = {
 			isa = PBXGroup;
 			children = (
+				C720F381205D312B008B4BC1 /* Main.storyboard */,
+				C720F3B8205D62AF008B4BC1 /* Models */,
+				C720F3B5205D626F008B4BC1 /* UI Elements */,
+				C720F3B2205D61A2008B4BC1 /* Login */,
 				C720F3B0205D3728008B4BC1 /* Start */,
 				C720F37F205D312B008B4BC1 /* SecondViewController.swift */,
 				C720F3AB205D34CE008B4BC1 /* Configuration.swift */,
@@ -151,11 +160,35 @@
 			isa = PBXGroup;
 			children = (
 				C720F389205D312B008B4BC1 /* Info.plist */,
-				C720F381205D312B008B4BC1 /* Main.storyboard */,
 				C720F37B205D312B008B4BC1 /* AppDelegate.swift */,
 				C720F386205D312B008B4BC1 /* LaunchScreen.storyboard */,
+				C720F3BB205D6CEF008B4BC1 /* Media.xcassets */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		C720F3B2205D61A2008B4BC1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C720F3B3205D61AE008B4BC1 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C720F3B5205D626F008B4BC1 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				C720F3B6205D6282008B4BC1 /* ConstructionSiteView.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		C720F3B8205D62AF008B4BC1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C720F3B9205D62B7008B4BC1 /* ConstructionSite.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,7 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C720F388205D312B008B4BC1 /* LaunchScreen.storyboard in Resources */,
-				C720F385205D312B008B4BC1 /* Assets.xcassets in Resources */,
+				C720F3BC205D6CEF008B4BC1 /* Media.xcassets in Resources */,
 				C720F383205D312B008B4BC1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,10 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C720F3B4205D61AE008B4BC1 /* LoginViewController.swift in Sources */,
+				C720F3BA205D62B7008B4BC1 /* ConstructionSite.swift in Sources */,
 				C720F380205D312B008B4BC1 /* SecondViewController.swift in Sources */,
 				C720F37C205D312B008B4BC1 /* AppDelegate.swift in Sources */,
 				C720F3AC205D34CE008B4BC1 /* Configuration.swift in Sources */,
 				C720F3AF205D3603008B4BC1 /* UIColor+Custom.swift in Sources */,
+				C720F3B7205D6282008B4BC1 /* ConstructionSiteView.swift in Sources */,
 				C720F37E205D312B008B4BC1 /* StartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
