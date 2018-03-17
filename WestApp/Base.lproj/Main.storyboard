@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="2750" y="298"/>
         </scene>
-        <!--Report View Controller-->
+        <!--Report Selection View Controller-->
         <scene sceneID="EKF-aT-H6Z">
             <objects>
-                <viewController id="jGx-th-YUN" customClass="ReportViewController" customModule="WestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jGx-th-YUN" customClass="ReportSelectionViewController" customModule="WestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kq4-hm-Ci6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,22 +185,40 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFN-lG-lGZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="reportProgress:" destination="jGx-th-YUN" eventType="touchUpInside" id="UTm-CH-Mfg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBg-rF-mY6">
-                                        <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
+                                        <rect key="frame" x="0.0" y="138.5" width="375" height="138.5"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="needTechnican:" destination="jGx-th-YUN" eventType="touchUpInside" id="efY-jh-kwT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbQ-tb-2Vm" userLabel="Surveyor Button">
+                                        <rect key="frame" x="0.0" y="277" width="375" height="138.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="needSurveyor:" destination="jGx-th-YUN" eventType="touchUpInside" id="Huz-9G-kIg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQf-0l-Fpf">
-                                        <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
+                                        <rect key="frame" x="0.0" y="415.5" width="375" height="138.5"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="finishedContructionSite:" destination="jGx-th-YUN" eventType="touchUpInside" id="8rF-NO-HWV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="EQf-0l-Fpf" firstAttribute="leading" secondItem="vZj-Xg-n41" secondAttribute="leading" id="14X-Dc-Zyf"/>
+                                    <constraint firstAttribute="trailing" secondItem="IbQ-tb-2Vm" secondAttribute="trailing" id="6X2-9P-ydz"/>
                                     <constraint firstItem="RBg-rF-mY6" firstAttribute="leading" secondItem="vZj-Xg-n41" secondAttribute="leading" id="Ca8-Dr-Wjm"/>
                                     <constraint firstAttribute="trailing" secondItem="EQf-0l-Fpf" secondAttribute="trailing" id="GkC-SA-Ot8"/>
+                                    <constraint firstItem="IbQ-tb-2Vm" firstAttribute="leading" secondItem="vZj-Xg-n41" secondAttribute="leading" id="X4d-dd-buJ"/>
                                     <constraint firstItem="GFN-lG-lGZ" firstAttribute="leading" secondItem="vZj-Xg-n41" secondAttribute="leading" id="ZfY-5l-zdW"/>
                                     <constraint firstAttribute="trailing" secondItem="RBg-rF-mY6" secondAttribute="trailing" id="ceL-DB-aJ5"/>
                                     <constraint firstAttribute="trailing" secondItem="GFN-lG-lGZ" secondAttribute="trailing" id="tTm-mt-ljM"/>
@@ -216,10 +234,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="of3-cs-yAu"/>
                     </view>
+                    <connections>
+                        <outlet property="finishedConstructionSite" destination="EQf-0l-Fpf" id="VW6-8T-q4A"/>
+                        <outlet property="needSurveyorButton" destination="IbQ-tb-2Vm" id="3gl-Tc-k6K"/>
+                        <outlet property="needTechnicanButton" destination="RBg-rF-mY6" id="T8w-Iu-itx"/>
+                        <outlet property="progressReportButton" destination="GFN-lG-lGZ" id="0kC-bk-Rfb"/>
+                        <segue destination="Rbc-G6-CES" kind="show" identifier="openReportForm" id="Gsp-J5-bIk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rov-AT-BrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2751" y="-461"/>
+        </scene>
+        <!--Report Form View Controller-->
+        <scene sceneID="Rri-fz-L43">
+            <objects>
+                <viewController id="Rbc-G6-CES" customClass="ReportFormViewController" customModule="WestApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bkP-7s-B2N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VAd-BD-wpz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uRj-Bt-aZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3943" y="-461"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

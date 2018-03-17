@@ -22,7 +22,8 @@
 		C720F3BC205D6CEF008B4BC1 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C720F3BB205D6CEF008B4BC1 /* Media.xcassets */; };
 		C720F3BF205D8A5F008B4BC1 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3BE205D8A5F008B4BC1 /* ContactViewController.swift */; };
 		C720F3C1205D8B22008B4BC1 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C0205D8B22008B4BC1 /* Contact.swift */; };
-		C720F3C4205D98FC008B4BC1 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C3205D98FC008B4BC1 /* ReportViewController.swift */; };
+		C720F3C4205D98FC008B4BC1 /* ReportSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C3205D98FC008B4BC1 /* ReportSelectionViewController.swift */; };
+		C720F3C6205DA0E8008B4BC1 /* ReportFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C5205DA0E8008B4BC1 /* ReportFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,8 @@
 		C720F3BB205D6CEF008B4BC1 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		C720F3BE205D8A5F008B4BC1 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		C720F3C0205D8B22008B4BC1 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
-		C720F3C3205D98FC008B4BC1 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		C720F3C3205D98FC008B4BC1 /* ReportSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSelectionViewController.swift; sourceTree = "<group>"; };
+		C720F3C5205DA0E8008B4BC1 /* ReportFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,7 +213,8 @@
 		C720F3C2205D988C008B4BC1 /* Report */ = {
 			isa = PBXGroup;
 			children = (
-				C720F3C3205D98FC008B4BC1 /* ReportViewController.swift */,
+				C720F3C3205D98FC008B4BC1 /* ReportSelectionViewController.swift */,
+				C720F3C5205DA0E8008B4BC1 /* ReportFormViewController.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -349,11 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C720F3C6205DA0E8008B4BC1 /* ReportFormViewController.swift in Sources */,
 				C720F3B4205D61AE008B4BC1 /* LoginViewController.swift in Sources */,
 				C720F3BA205D62B7008B4BC1 /* ConstructionSite.swift in Sources */,
 				C720F3C1205D8B22008B4BC1 /* Contact.swift in Sources */,
 				C720F380205D312B008B4BC1 /* SecondViewController.swift in Sources */,
-				C720F3C4205D98FC008B4BC1 /* ReportViewController.swift in Sources */,
+				C720F3C4205D98FC008B4BC1 /* ReportSelectionViewController.swift in Sources */,
 				C720F37C205D312B008B4BC1 /* AppDelegate.swift in Sources */,
 				C720F3AC205D34CE008B4BC1 /* Configuration.swift in Sources */,
 				C720F3BF205D8A5F008B4BC1 /* ContactViewController.swift in Sources */,

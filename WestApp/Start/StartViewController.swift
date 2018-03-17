@@ -87,33 +87,4 @@ class StartViewController: UIViewController {
   @IBAction func openReportViewController(_ sender: Any) {
     performSegue(withIdentifier: "openReportViewController", sender: nil)
   }
-  
-  @IBAction func openPhotoLibraryButton(sender: AnyObject) {
-    if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
-      
-      let imagePicker = UIImagePickerController()
-      imagePicker.delegate = self
-      imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
-      imagePicker.allowsEditing = true
-      
-      self.present(imagePicker, animated: true, completion: nil)
-    }
-  }
 }
-
-// MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
-
-extension StartViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-  
-  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    
-    if let photo = info["UIImagePickerControllerEditedImage"] as? UIImage {
-      photos.append(photo)
-    } else {
-      print("Something went wrong")
-    }
-    
-    self.dismiss(animated: true, completion: nil)
-  }
-}
-
