@@ -13,7 +13,7 @@
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="WestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="StartViewController" customModule="WestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,15 +23,18 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-A7-YcQ">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Presence Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXM-9W-UhM">
                                         <rect key="frame" x="0.0" y="199.5" width="375" height="199"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Photo Documentation Button"/>
+                                        <connections>
+                                            <action selector="openPhotoLibraryButtonWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="iad-od-VKh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-9S-SSZ">
                                         <rect key="frame" x="0.0" y="398.5" width="375" height="199.5"/>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="Contact Button"/>
                                     </button>
                                 </subviews>
                             </stackView>
