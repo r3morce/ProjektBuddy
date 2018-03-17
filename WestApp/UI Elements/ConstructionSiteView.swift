@@ -12,18 +12,24 @@ class ConstructionSiteView: UIView {
   // MARK: - Properties
   
   private var constructionSite: ConstructionSite!
+  
   private var imageView: UIImageView! {
     didSet {
       imageView.translatesAutoresizingMaskIntoConstraints = false
+      imageView.contentMode = .scaleAspectFill
+      imageView.clipsToBounds = true
     }
   }
   private var streetNameLabel: UILabel! {
     didSet {
+      streetNameLabel.font = Configuration.Fonts.title
+      streetNameLabel.textColor = Configuration.Colors.black
       streetNameLabel.translatesAutoresizingMaskIntoConstraints = false
     }
   }
   private var infoLabel: UILabel! {
     didSet {
+      infoLabel.textColor = Configuration.Colors.black
       infoLabel.translatesAutoresizingMaskIntoConstraints = false
       infoLabel.numberOfLines = 0
       infoLabel.lineBreakMode = .byWordWrapping
@@ -59,7 +65,7 @@ class ConstructionSiteView: UIView {
       fatalError("construction site not found")
     }
     
-    backgroundColor = Configuration.Colors.fuchsia
+    backgroundColor = Configuration.Colors.white
     
     imageView = UIImageView()
     addSubview(imageView)

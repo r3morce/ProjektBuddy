@@ -27,8 +27,8 @@ class Configuration {
   // MARK: - Fonts
   
   class Fonts {
-    static let button = UIFont.systemFont(ofSize: 18, weight: .light)
-    static let title = UIFont.systemFont(ofSize: 24, weight: .bold)
-    static let text = UIFont.systemFont(ofSize: 14, weight: .medium)
+    static let button = UIFont.systemFont(ofSize: 18, weight: .bold)
+    static let title = UIFont.systemFont(ofSize: 24, weight: .medium)
+    static let text = UIFont.systemFont(ofSize: 14, weight: .light)
   }
 }

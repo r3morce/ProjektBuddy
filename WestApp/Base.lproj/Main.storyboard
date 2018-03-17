@@ -89,23 +89,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQK-4z-mNo">
-                                <rect key="frame" x="8" y="72" width="359" height="128"/>
-                                <color key="backgroundColor" red="1" green="0.28303598728905766" blue="0.18052665091414966" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l20-EU-d8F">
+                                <rect key="frame" x="0.0" y="64" width="375" height="360"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQK-4z-mNo">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="120"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="XyN-42-8f1"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ck-2H-jxk">
+                                        <rect key="frame" x="0.0" y="120" width="375" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="4" id="74v-fL-Hvv"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="acceptConstructionSite" destination="VYe-v1-om3" eventType="touchUpInside" id="Jef-to-Q50"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnN-YE-o71">
+                                        <rect key="frame" x="0.0" y="240" width="375" height="120"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="2k2-Lq-wwv"/>
+                                    <constraint firstAttribute="trailing" secondItem="lnN-YE-o71" secondAttribute="trailing" id="4J7-L9-lRW"/>
+                                    <constraint firstItem="lnN-YE-o71" firstAttribute="leading" secondItem="l20-EU-d8F" secondAttribute="leading" id="Dgd-bd-PPI"/>
+                                    <constraint firstItem="3ck-2H-jxk" firstAttribute="leading" secondItem="l20-EU-d8F" secondAttribute="leading" id="Ggf-D2-Yfp"/>
+                                    <constraint firstAttribute="trailing" secondItem="3ck-2H-jxk" secondAttribute="trailing" id="a4F-ap-W7T"/>
                                 </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vQK-4z-mNo" firstAttribute="leading" secondItem="ITI-vO-HMU" secondAttribute="leading" constant="8" id="0WY-mL-wcv"/>
-                            <constraint firstItem="vQK-4z-mNo" firstAttribute="top" secondItem="ITI-vO-HMU" secondAttribute="top" constant="8" id="5YG-JP-iha"/>
-                            <constraint firstItem="ITI-vO-HMU" firstAttribute="trailing" secondItem="vQK-4z-mNo" secondAttribute="trailing" constant="8" id="Pjg-QY-Vnc"/>
+                            <constraint firstItem="l20-EU-d8F" firstAttribute="top" secondItem="ITI-vO-HMU" secondAttribute="top" id="4jZ-5I-8vt"/>
+                            <constraint firstItem="ITI-vO-HMU" firstAttribute="trailing" secondItem="l20-EU-d8F" secondAttribute="trailing" id="79b-Mb-H1T"/>
+                            <constraint firstItem="ITI-vO-HMU" firstAttribute="bottom" secondItem="l20-EU-d8F" secondAttribute="bottom" id="81E-0k-liC"/>
+                            <constraint firstItem="l20-EU-d8F" firstAttribute="leading" secondItem="ITI-vO-HMU" secondAttribute="leading" id="hft-9c-nLy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ITI-vO-HMU"/>
                     </view>
                     <connections>
+                        <outlet property="acceptButton" destination="3ck-2H-jxk" id="WzN-eY-q7F"/>
+                        <outlet property="chooseConstructionSiteButton" destination="lnN-YE-o71" id="PYU-ii-qRv"/>
                         <outlet property="constructionSiteContainerView" destination="vQK-4z-mNo" id="CqJ-st-CNs"/>
                     </connections>
                 </viewController>
