@@ -12,9 +12,21 @@ class ConstructionSiteView: UIView {
   // MARK: - Properties
   
   private var constructionSite: ConstructionSite!
-  private var imageView: UIImageView!
-  private var streetNameLabel: UILabel!
-  private var infoLabel: UILabel!
+  private var imageView: UIImageView! {
+    didSet {
+      imageView.translatesAutoresizingMaskIntoConstraints = false
+    }
+  }
+  private var streetNameLabel: UILabel! {
+    didSet {
+      streetNameLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+  }
+  private var infoLabel: UILabel! {
+    didSet {
+      infoLabel.translatesAutoresizingMaskIntoConstraints = false
+    }
+  }
   
   private var views: [String: Any] {
     return [
@@ -27,7 +39,7 @@ class ConstructionSiteView: UIView {
   // MARK: - Lifecycle
   
   init(constructionSite: ConstructionSite) {
-    super.init(frame: CGRect.zero)
+    super.init(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
     
     self.constructionSite = constructionSite
     setup()
@@ -44,6 +56,8 @@ class ConstructionSiteView: UIView {
     guard let constructionSite = constructionSite else {
       fatalError("construction site not found")
     }
+    
+    backgroundColor = Configuration.Colors.fuchsia
     
     imageView = UIImageView()
     addSubview(imageView)
@@ -62,7 +76,11 @@ class ConstructionSiteView: UIView {
   
   private func constraint() {
     
-    NSLayoutConstraint.constraints(withVisualFormat: "H:|-[imageView]-[streetNameLabel]-|", options: [], metrics: [:], views: views)
-    NSLayoutConstraint.constraints(withVisualFormat: "V:|-[imageView]-|", options: [], metrics: [:], views: views)
+    var constraints: [NSLayoutConstraint] = []
+    
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[imageView(120)]-[streetNameLabel]-|", metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[imageView(120)]-|", metrics: nil, views: views)
+    
+    NSLayoutConstraint.activate(constraints)
   }
 }
