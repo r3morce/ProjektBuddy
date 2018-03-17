@@ -31,7 +31,7 @@ class StartViewController: UIViewController {
   
   @IBOutlet weak var contactButton: UIButton! {
     didSet {
-      contactButton.setTitle("Anwesenheit", for: .normal)
+      contactButton.setTitle("Kontakt", for: .normal)
       contactButton.titleLabel?.font = Configuration.Fonts.button
       contactButton.backgroundColor = Configuration.Colors.indigo
       contactButton.setTitleColor(Configuration.Colors.white, for: .normal)
@@ -59,6 +59,8 @@ class StartViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+    title = "Westnetz Projekt Buddy"
   }
 
   override func didReceiveMemoryWarning() {
