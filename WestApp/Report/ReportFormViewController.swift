@@ -64,6 +64,13 @@ class ReportFormViewController: UIViewController {
   private func setup() {
     photoToSend?.image = photo
   }
+  
+  // MARK: - IBActions
+  
+  @IBAction func send(_ sender: Any) {
+    
+    
+  }
 }
 
 extension ReportFormViewController: UITextFieldDelegate {

@@ -281,6 +281,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEK-Hd-dZC">
                                         <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="send:" destination="Rbc-G6-CES" eventType="touchUpInside" id="zX0-9C-fdb"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
