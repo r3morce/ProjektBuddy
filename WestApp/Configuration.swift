@@ -11,6 +11,10 @@ class Configuration {
   
   // MARK: URLs
   
+  class URLs {
+    static let api = "http://projektbuddy-ws-projektbuddy-ws.7e14.starter-us-west-2.openshiftapps.com/projektbuddy-ws/api/"
+  }
+  
   // MARK: - Colors
   
   class Colors {

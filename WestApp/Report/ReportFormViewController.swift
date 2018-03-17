@@ -66,7 +66,7 @@ class ReportFormViewController: UIViewController {
     photoToSend?.image = photo
   }
   
-  private func uploadPhoto() {
+  private func sendSMS() {
     
     let parameters: Parameters = [
       "phone": "+491774437073",
@@ -77,10 +77,25 @@ class ReportFormViewController: UIViewController {
     Alamofire.request("https://textbelt.com/text", method: .post, parameters: parameters)
   }
   
+  private func uploadPhoto() {
+    
+    let parameters: Parameters = [
+      "text": ""
+//      "image": photo.enco,
+//      "type": "",
+//      "incidentDate": "",
+//      "projectId": "",
+//      "latitude": "",
+//      "longitude": ""
+    ]
+    
+    Alamofire.request("https://textbelt.com/text", method: .post, parameters: parameters)
+  }
+  
   // MARK: - IBActions
   
   @IBAction func send(_ sender: Any) {
-    
+    sendSMS()
     
   }
 }

@@ -21,7 +21,34 @@ class SecondViewController: UIViewController {
   }
 
   @IBAction func sendSMS(_ sender: Any) {
-
+    
+    
+    guard let image: UIImage = UIImage(named:"construction site") else {
+      return
+    }
+    
+    guard let imageData: NSData = UIImagePNGRepresentation(image) as NSData? else {
+      return
+    }
+    
+    let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
+    
+    let parameters: Parameters = [
+      "text": "test",
+      "image": strBase64,
+      "type": "Todo: Meldungstyp",
+      "incidentDate": "Todo",
+      "projectId": "Todo",
+      "latitude": "Todo",
+      "longitude": "Todo"
+    ]
+    
+    
+    Alamofire.request(Configuration.URLs.api, method: .post, parameters: parameters).response(completionHandler: { response in
+      
+      print(response.response?.allHeaderFields)
+      print(response.response?.statusCode)
+    })
   }
   
   
