@@ -253,13 +253,65 @@
                     <view key="view" contentMode="scaleToFill" id="bkP-7s-B2N">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k21-R0-Pvt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CbU-FP-m0a">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTx-NN-siP">
+                                        <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8aK-OC-hgW">
+                                                <rect key="frame" x="8" y="4" width="359" height="177"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8aK-OC-hgW" secondAttribute="trailing" constant="8" id="Gb3-WA-z8f"/>
+                                            <constraint firstItem="8aK-OC-hgW" firstAttribute="leading" secondItem="VTx-NN-siP" secondAttribute="leading" constant="8" id="g4O-pk-i2J"/>
+                                            <constraint firstItem="8aK-OC-hgW" firstAttribute="top" secondItem="VTx-NN-siP" secondAttribute="top" constant="4" id="lYg-xl-eeA"/>
+                                            <constraint firstAttribute="bottom" secondItem="8aK-OC-hgW" secondAttribute="bottom" constant="4" id="xDB-lM-ED4"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEK-Hd-dZC">
+                                        <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VTx-NN-siP" secondAttribute="trailing" id="9VW-H2-Af5"/>
+                                    <constraint firstItem="VTx-NN-siP" firstAttribute="leading" secondItem="k21-R0-Pvt" secondAttribute="leading" id="P7O-6b-aOu"/>
+                                    <constraint firstAttribute="trailing" secondItem="gEK-Hd-dZC" secondAttribute="trailing" id="RQv-l7-b6V"/>
+                                    <constraint firstItem="CbU-FP-m0a" firstAttribute="leading" secondItem="k21-R0-Pvt" secondAttribute="leading" id="aum-rJ-Nuy"/>
+                                    <constraint firstAttribute="trailing" secondItem="CbU-FP-m0a" secondAttribute="trailing" id="pi0-kK-uaZ"/>
+                                    <constraint firstItem="gEK-Hd-dZC" firstAttribute="leading" secondItem="k21-R0-Pvt" secondAttribute="leading" id="rq1-Pq-CZd"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VAd-BD-wpz" firstAttribute="trailing" secondItem="k21-R0-Pvt" secondAttribute="trailing" id="Xp2-BG-cTj"/>
+                            <constraint firstItem="VAd-BD-wpz" firstAttribute="bottom" secondItem="k21-R0-Pvt" secondAttribute="bottom" id="gPf-r8-9RT"/>
+                            <constraint firstItem="k21-R0-Pvt" firstAttribute="leading" secondItem="VAd-BD-wpz" secondAttribute="leading" id="rb2-WJ-Zgs"/>
+                            <constraint firstItem="k21-R0-Pvt" firstAttribute="top" secondItem="VAd-BD-wpz" secondAttribute="top" id="rzb-Q9-1Hp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VAd-BD-wpz"/>
                     </view>
+                    <connections>
+                        <outlet property="photoToSend" destination="CbU-FP-m0a" id="pWz-h1-M9l"/>
+                        <outlet property="sendButton" destination="gEK-Hd-dZC" id="fct-td-fCk"/>
+                        <outlet property="textField" destination="8aK-OC-hgW" id="t1g-vy-BdO"/>
+                        <outlet property="textFieldBackgroundView" destination="VTx-NN-siP" id="EpS-wS-10O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRj-Bt-aZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3943" y="-461"/>
+            <point key="canvasLocation" x="3895.1999999999998" y="-461.01949025487261"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

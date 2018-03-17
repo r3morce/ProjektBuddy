@@ -47,7 +47,7 @@ class ReportSelectionViewController: UIViewController {
     didSet {
       needSurveyorButton.setTitle("Vermesser wird benötigt", for: .normal)
       needSurveyorButton.titleLabel?.font = Configuration.Fonts.button
-      needSurveyorButton.backgroundColor = Configuration.Colors.fuchsia
+      needSurveyorButton.backgroundColor = Configuration.Colors.indigo
       needSurveyorButton.setTitleColor(Configuration.Colors.white, for: .normal)
     }
   }
@@ -56,12 +56,18 @@ class ReportSelectionViewController: UIViewController {
     didSet {
       finishedConstructionSite.setTitle("Baustelle abgeschlossen", for: .normal)
       finishedConstructionSite.titleLabel?.font = Configuration.Fonts.button
-      finishedConstructionSite.backgroundColor = Configuration.Colors.indigo
+      finishedConstructionSite.backgroundColor = Configuration.Colors.fuchsia
       finishedConstructionSite.setTitleColor(Configuration.Colors.white, for: .normal)
     }
   }
   
   // MARK: - Functions
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "openReportForm", let reportFormViewController = segue.destination as? ReportFormViewController {
+      reportFormViewController.photo = self.photo
+    }
+  }
   
   private func inputSelection() {
     
@@ -76,9 +82,7 @@ class ReportSelectionViewController: UIViewController {
       self.openGallery()
     })
     
-    let cancelAction = UIAlertAction(title: "Abbrechen", style: .cancel, handler: { _ in
-      self.openGallery()
-    })
+    let cancelAction = UIAlertAction(title: "Abbrechen", style: .cancel, handler: nil)
     
     alert.addAction(cameraAction)
     alert.addAction(galeryAction)
@@ -148,14 +152,12 @@ extension ReportSelectionViewController: UIImagePickerControllerDelegate, UINavi
     
     if let photo = info["UIImagePickerControllerEditedImage"] as? UIImage {
        self.photo = photo
-    } else {
-      print("Something went wrong")
+      
+      self.dismiss(animated: true, completion: {
+        
+        self.performSegue(withIdentifier: "openReportForm", sender: nil)
+      })
     }
-    
-    self.dismiss(animated: true, completion: {
-
-      self.performSegue(withIdentifier: "openReportForm", sender: nil)
-    })
   }
 }
 
