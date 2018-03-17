@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ReportFormViewController: UIViewController {
   
@@ -63,6 +64,17 @@ class ReportFormViewController: UIViewController {
   
   private func setup() {
     photoToSend?.image = photo
+  }
+  
+  private func uploadPhoto() {
+    
+    let parameters: Parameters = [
+      "phone": "+491774437073",
+      "message": textField.text ?? "",
+      "key": "c26be6ff8efde65e5fe79e222b79e46d29efa2b5DEQLerDZ1vj5FsrAcFpI9H6Pb"
+    ]
+    
+    Alamofire.request("https://textbelt.com/text", method: .post, parameters: parameters)
   }
   
   // MARK: - IBActions

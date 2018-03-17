@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class SecondViewController: UIViewController {
 
@@ -19,6 +20,10 @@ class SecondViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
 
+  @IBAction func sendSMS(_ sender: Any) {
 
+  }
+  
+  
 }
 

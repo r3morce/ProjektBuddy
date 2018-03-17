@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C4425ECA32A5788351AA95C /* Pods_WestAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BE666BA5CBAD397BF731113 /* Pods_WestAppUITests.framework */; };
+		62E4C707F4276CC539931A14 /* Pods_WestAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2907F0813E967BAEC7630FC /* Pods_WestAppTests.framework */; };
 		C720F37C205D312B008B4BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F37B205D312B008B4BC1 /* AppDelegate.swift */; };
 		C720F37E205D312B008B4BC1 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F37D205D312B008B4BC1 /* StartViewController.swift */; };
 		C720F380205D312B008B4BC1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F37F205D312B008B4BC1 /* SecondViewController.swift */; };
@@ -24,6 +26,7 @@
 		C720F3C1205D8B22008B4BC1 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C0205D8B22008B4BC1 /* Contact.swift */; };
 		C720F3C4205D98FC008B4BC1 /* ReportSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C3205D98FC008B4BC1 /* ReportSelectionViewController.swift */; };
 		C720F3C6205DA0E8008B4BC1 /* ReportFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C5205DA0E8008B4BC1 /* ReportFormViewController.swift */; };
+		D0306DCA746A2C3FCADB14C4 /* Pods_WestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2960B6D73652F7DB9588A84E /* Pods_WestApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BD5ECDF70D3F3414CB586E6 /* Pods-WestAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WestAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WestAppUITests/Pods-WestAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1F056EEC337867B6F6CAC568 /* Pods-WestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WestApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WestApp/Pods-WestApp.debug.xcconfig"; sourceTree = "<group>"; };
+		251D27682F835D32058A53F6 /* Pods-WestAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WestAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WestAppTests/Pods-WestAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2960B6D73652F7DB9588A84E /* Pods_WestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE666BA5CBAD397BF731113 /* Pods_WestAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WestAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D64FCBE9DEECF7F8822CE4F /* Pods-WestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WestApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-WestApp/Pods-WestApp.release.xcconfig"; sourceTree = "<group>"; };
+		7B01954FE271F67BD04342B1 /* Pods-WestAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WestAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WestAppUITests/Pods-WestAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		974A77D8AC570E6A3767016C /* Pods-WestAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WestAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WestAppTests/Pods-WestAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2907F0813E967BAEC7630FC /* Pods_WestAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WestAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C720F378205D312B008B4BC1 /* WestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C720F37B205D312B008B4BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C720F37D205D312B008B4BC1 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0306DCA746A2C3FCADB14C4 /* Pods_WestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E4C707F4276CC539931A14 /* Pods_WestAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,12 +102,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C4425ECA32A5788351AA95C /* Pods_WestAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		103B6E5AF9E9697CEF854B5A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F056EEC337867B6F6CAC568 /* Pods-WestApp.debug.xcconfig */,
+				3D64FCBE9DEECF7F8822CE4F /* Pods-WestApp.release.xcconfig */,
+				251D27682F835D32058A53F6 /* Pods-WestAppTests.debug.xcconfig */,
+				974A77D8AC570E6A3767016C /* Pods-WestAppTests.release.xcconfig */,
+				7B01954FE271F67BD04342B1 /* Pods-WestAppUITests.debug.xcconfig */,
+				1BD5ECDF70D3F3414CB586E6 /* Pods-WestAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C720F36F205D312B008B4BC1 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +131,8 @@
 				C720F391205D312B008B4BC1 /* WestAppTests */,
 				C720F39C205D312B008B4BC1 /* WestAppUITests */,
 				C720F379205D312B008B4BC1 /* Products */,
+				103B6E5AF9E9697CEF854B5A /* Pods */,
+				F8FD6C95D64FD9AD302151CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,6 +249,16 @@
 			path = Report;
 			sourceTree = "<group>";
 		};
+		F8FD6C95D64FD9AD302151CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2960B6D73652F7DB9588A84E /* Pods_WestApp.framework */,
+				A2907F0813E967BAEC7630FC /* Pods_WestAppTests.framework */,
+				2BE666BA5CBAD397BF731113 /* Pods_WestAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,9 +266,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C720F3A2205D312B008B4BC1 /* Build configuration list for PBXNativeTarget "WestApp" */;
 			buildPhases = (
+				1BBAC72F5D7190611E0E95B1 /* [CP] Check Pods Manifest.lock */,
 				C720F374205D312B008B4BC1 /* Sources */,
 				C720F375205D312B008B4BC1 /* Frameworks */,
 				C720F376205D312B008B4BC1 /* Resources */,
+				0EB62BEBCB07E683E4D36EDC /* [CP] Embed Pods Frameworks */,
+				B5C69DD8186F1DF4DCF3D774 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,9 +286,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C720F3A5205D312B008B4BC1 /* Build configuration list for PBXNativeTarget "WestAppTests" */;
 			buildPhases = (
+				CEF85AE0B3B168B4C625C4C7 /* [CP] Check Pods Manifest.lock */,
 				C720F38A205D312B008B4BC1 /* Sources */,
 				C720F38B205D312B008B4BC1 /* Frameworks */,
 				C720F38C205D312B008B4BC1 /* Resources */,
+				DBE3E3ABBD2479CAD14C0CA8 /* [CP] Embed Pods Frameworks */,
+				28DE635BB71715D85408A096 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,9 +307,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C720F3A8205D312B008B4BC1 /* Build configuration list for PBXNativeTarget "WestAppUITests" */;
 			buildPhases = (
+				5C42FB2C409839B917B32E7C /* [CP] Check Pods Manifest.lock */,
 				C720F395205D312B008B4BC1 /* Sources */,
 				C720F396205D312B008B4BC1 /* Frameworks */,
 				C720F397205D312B008B4BC1 /* Resources */,
+				98D2A24D1FDB34068017BD18 /* [CP] Embed Pods Frameworks */,
+				C2DA92AAED19F98D495048CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -346,6 +395,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EB62BEBCB07E683E4D36EDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WestApp/Pods-WestApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WestApp/Pods-WestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BBAC72F5D7190611E0E95B1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		28DE635BB71715D85408A096 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WestAppTests/Pods-WestAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C42FB2C409839B917B32E7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WestAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98D2A24D1FDB34068017BD18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WestAppUITests/Pods-WestAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5C69DD8186F1DF4DCF3D774 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WestApp/Pods-WestApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2DA92AAED19F98D495048CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WestAppUITests/Pods-WestAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEF85AE0B3B168B4C625C4C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WestAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE3E3ABBD2479CAD14C0CA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WestAppTests/Pods-WestAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C720F374205D312B008B4BC1 /* Sources */ = {
@@ -527,6 +726,7 @@
 		};
 		C720F3A3205D312B008B4BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F056EEC337867B6F6CAC568 /* Pods-WestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -545,6 +745,7 @@
 		};
 		C720F3A4205D312B008B4BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D64FCBE9DEECF7F8822CE4F /* Pods-WestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -563,6 +764,7 @@
 		};
 		C720F3A6205D312B008B4BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 251D27682F835D32058A53F6 /* Pods-WestAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +781,7 @@
 		};
 		C720F3A7205D312B008B4BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 974A77D8AC570E6A3767016C /* Pods-WestAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -595,6 +798,7 @@
 		};
 		C720F3A9205D312B008B4BC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B01954FE271F67BD04342B1 /* Pods-WestAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -610,6 +814,7 @@
 		};
 		C720F3AA205D312B008B4BC1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BD5ECDF70D3F3414CB586E6 /* Pods-WestAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
