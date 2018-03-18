@@ -12,10 +12,13 @@ class ContactViewController: UITableViewController {
   // MARK: - Properties
   
   private var contacts: [Contact] = [
-    Contact(name: "Mathias Schmidt", phone: "+0123456789", email: "roteaugen@gmx.net", companyName: "ACME Hacking"),
-    Contact(name: "Khai Ho", phone: "+0123456789", email: "khaiho@gmx.net", companyName: "ACME Hacking"),
-    Contact(name: "Philipp Designboi", phone: "+0123456789", email: "miomao@gmx.net", companyName: "Apple Headquarters"),
-    Contact(name: "Leisure Suit Larry", phone: "+0123456789", email: "peanutbutterlover@gmx.net", companyName: "Lucasarts")
+    Contact(name: "Mathias Schmidt", phone: "+0123456789", email: "roteaugen@gmx.net", companyName: "ACME Hacking", role: "Kommune"),
+    Contact(name: "Khai Ho", phone: "+0123456789", email: "khaiho@gmx.net", companyName: "ACME Hacking", role: "Tiefbauer"),
+    Contact(name: "Philipp Designboi", phone: "+0123456789", email: "miomao@gmx.net", companyName: "Apple Headquarters", role: "Vermesser"),
+    Contact(name: "Leisure Suit Larry", phone: "+0123456789", email: "peanutbutterlover@gmx.net", companyName: "Lucasarts", role: "Vermesser"),
+    Contact(name: "Mad Max", phone: "+0123456789", email: "desert@gmx.net", companyName: "Selbststädig", role: "Aufmaß"),
+    Contact(name: "Ronald Mc Donald", phone: "+0123456789", email: "peanutbutterlover@aol.de", companyName: "Lucasarts", role: "Systemdienstleister"),
+    Contact(name: "Evil Mastermind", phone: "+0123456789", email: "pinkytoe@web.de", companyName: "Worldwide Inc", role: "Systemdienstleister")
   ]
   
   // MARK: - IBOutlets
@@ -34,14 +37,14 @@ class ContactViewController: UITableViewController {
     
     let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "")
     
-    cell.textLabel?.text = contacts[indexPath.row].name
+    let contact = contacts[indexPath.row]
+    
+    cell.textLabel?.text = contact.name
     cell.textLabel?.font = Configuration.Fonts.button
     
-    cell.detailTextLabel?.text = contacts[indexPath.row].companyName
+    cell.detailTextLabel?.text = contact.role + ", " + contact.companyName
     cell.detailTextLabel?.font = Configuration.Fonts.text
-    
-    
-    
+      
     return cell
   }
   

@@ -37,7 +37,7 @@ class SecondViewController: UIViewController {
       "text": "test",
       "image": strBase64,
       "type": "Todo: Meldungstyp",
-      "incidentDate": "Todo",
+      "incidentDate": "2012-04-23T18:25:43.511Z",
       "projectId": "Todo",
       "latitude": "Todo",
       "longitude": "Todo"

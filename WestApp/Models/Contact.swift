@@ -13,4 +13,5 @@ struct Contact {
   let phone: String
   let email: String
   let companyName: String
+  let role: String
 }

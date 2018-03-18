@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 protocol ConstructionSiteDelegate {
   func didSelect(constructionSite: ConstructionSite)
@@ -67,9 +68,51 @@ class StartViewController: UIViewController {
     // Do any additional setup after loading the view, typically from a nib.
     
     title = "Westnetz Projekt Buddy"
+    
+    loadProjects()
   }
 
   // MARK: - Functions
+  
+  private func loadProjects() {
+    
+    Alamofire.request("https://westnetz-646d0.firebaseio.com/projects.json").responseJSON { response in
+//      debugPrint(response)
+//
+//      print(response.result)
+//
+//      print(response.result.value!)
+      
+      let dict = response.result.value! as! [String: Any]
+      
+      print(dict.first)
+      
+      let site = dict.first?.value as! [String: Any]
+   
+      
+//      let constructionSiteResponse = dict.first as! [String: Any]
+      
+      let adress = ConstructionSite.Adress(streetName: "streetName", streetNumber: "streetNumber", zipCode: "zipCode", cityName: "cityName")
+      
+//      let constructionSite = ConstructionSite(adress: adress, image: #imageLiteral(resourceName: "construction site"), infoText: site["area"] as! String)
+      
+      
+//      do {
+//        return try JSONSerialization.jsonObject(with: response.result.value, options: []) as? [String: Any]
+//      } catch {
+//        print(error.localizedDescription)
+//      }
+      
+      
+
+//      let jsonData = jsonString.data(encoding: .utf8)!
+//      let decoder = JSONDecoder()
+//      let constructionSite = try! decoder.decode(ConstructionSiteResponse.self, from: response as Data)
+
+      
+      
+    }
+  }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     

@@ -13,10 +13,20 @@ struct ConstructionSite {
   var image: UIImage
   var infoText: String
   
-  struct Adress {
+  struct Adress: Codable {
     var streetName: String
     var streetNumber: String
     var zipCode: String
     var cityName: String
   }
 }
+
+struct ConstructionSiteResponse: Codable {
+  
+  var infoText: String
+  var streetName: String
+  var streetNumber: String
+  var zipCode: String
+  var cityName: String
+}
+
