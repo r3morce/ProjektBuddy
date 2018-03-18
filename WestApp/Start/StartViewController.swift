@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ConstructionSiteDelegate {
+  func didSelect(constructionSite: ConstructionSite)
+}
+
 class StartViewController: UIViewController {
   
   // MARK: - IBOutlets
@@ -17,6 +21,8 @@ class StartViewController: UIViewController {
       presenceButton.titleLabel?.font = Configuration.Fonts.button
       presenceButton.backgroundColor = Configuration.Colors.yellow
       presenceButton.setTitleColor(Configuration.Colors.white, for: .normal)
+      
+      presenceButton.titleLabel?.lineBreakMode = .byWordWrapping
     }
   }
   
@@ -42,16 +48,16 @@ class StartViewController: UIViewController {
   
   var photos: [UIImage] = []
   
-  var currentConstructionSite: ConstructionSite {
-    
-    let adress = ConstructionSite.Adress(streetName: "Teststrasse", streetNumber: "2b", zipCode: "54478", cityName: "Essen")
-    let image = UIImage(named: "construction site")!
-    
-    let loremIpsum = """
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed d
-    """
-    
-    return ConstructionSite(adress: adress, image: image, infoText: loremIpsum)
+  var currentConstructionSite: ConstructionSite? {
+    didSet {
+      
+      if let adress = currentConstructionSite?.adress {
+      let text = "\(adress.streetName) \(adress.streetNumber)\n\(adress.zipCode) \(adress.cityName)"
+        presenceButton.setTitle(text, for: .normal)
+      } else {
+        presenceButton.setTitle("Ankunft", for: .normal)
+      }
+    }
   }
   
   // MARK: - Lifecycle
@@ -63,22 +69,17 @@ class StartViewController: UIViewController {
     title = "Westnetz Projekt Buddy"
   }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
-  
   // MARK: - Functions
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
     if segue.identifier == "openLoginViewController", let loginViewController = segue.destination as? LoginViewController {
-      loginViewController.constructionSite = currentConstructionSite
+      loginViewController.delegate = self
+      
     }
   }
   
   // MARK: - IBActions
-  
   
   @IBAction func openLoginViewController(_ sender: Any) {
     performSegue(withIdentifier: "openLoginViewController", sender: nil)
@@ -86,5 +87,12 @@ class StartViewController: UIViewController {
   
   @IBAction func openReportViewController(_ sender: Any) {
     performSegue(withIdentifier: "openReportViewController", sender: nil)
+  }
+}
+
+extension StartViewController: ConstructionSiteDelegate {
+  
+  func didSelect(constructionSite: ConstructionSite) {
+    self.currentConstructionSite = constructionSite
   }
 }

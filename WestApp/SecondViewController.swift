@@ -46,8 +46,8 @@ class SecondViewController: UIViewController {
     
     Alamofire.request(Configuration.URLs.api, method: .post, parameters: parameters).response(completionHandler: { response in
       
-      print(response.response?.allHeaderFields)
-      print(response.response?.statusCode)
+      print(response.response?.allHeaderFields as Any)
+      print(response.response?.statusCode as Any)
     })
   }
   

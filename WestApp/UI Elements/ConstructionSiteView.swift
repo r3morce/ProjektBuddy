@@ -16,21 +16,37 @@ class ConstructionSiteView: UIView {
   private var imageView: UIImageView! {
     didSet {
       imageView.translatesAutoresizingMaskIntoConstraints = false
+      
+      imageView.translatesAutoresizingMaskIntoConstraints = false
       imageView.contentMode = .scaleAspectFill
       imageView.clipsToBounds = true
     }
   }
+  
   private var streetNameLabel: UILabel! {
     didSet {
+      streetNameLabel.translatesAutoresizingMaskIntoConstraints = false
+      
       streetNameLabel.font = Configuration.Fonts.title
       streetNameLabel.textColor = Configuration.Colors.black
-      streetNameLabel.translatesAutoresizingMaskIntoConstraints = false
     }
   }
+  
+  private var streetNumberLabel: UILabel! {
+    didSet {
+      streetNumberLabel.translatesAutoresizingMaskIntoConstraints = false
+      
+      streetNumberLabel.font = Configuration.Fonts.title
+      streetNumberLabel.textColor = Configuration.Colors.black
+    }
+  }
+  
   private var infoLabel: UILabel! {
     didSet {
-      infoLabel.textColor = Configuration.Colors.black
       infoLabel.translatesAutoresizingMaskIntoConstraints = false
+      
+      infoLabel.textColor = Configuration.Colors.black
+      
       infoLabel.numberOfLines = 0
       infoLabel.lineBreakMode = .byWordWrapping
     }
@@ -40,6 +56,7 @@ class ConstructionSiteView: UIView {
     return [
       "imageView": imageView,
       "streetNameLabel": streetNameLabel,
+      "streetNumberLabel": streetNumberLabel,
       "infoLabel": infoLabel
     ]
   }
@@ -73,11 +90,15 @@ class ConstructionSiteView: UIView {
     streetNameLabel = UILabel()
     addSubview(streetNameLabel)
     
+    streetNumberLabel = UILabel()
+    addSubview(streetNumberLabel)
+    
     infoLabel = UILabel()
     addSubview(infoLabel)
     
     imageView?.image = constructionSite.image
-    streetNameLabel?.text = constructionSite.adress.streetName + " " + constructionSite.adress.streetNumber
+    streetNameLabel?.text = constructionSite.adress.streetName
+    streetNumberLabel.text = constructionSite.adress.streetNumber
     infoLabel.text = constructionSite.infoText
     
     constraint()
@@ -87,10 +108,12 @@ class ConstructionSiteView: UIView {
     
     var constraints: [NSLayoutConstraint] = []
     
-    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[imageView(120)]-[streetNameLabel]-|", options: [.alignAllTop], metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[imageView(120)]-[streetNameLabel]-[streetNumberLabel(>=20@800)]", options: [.alignAllTop], metrics: nil, views: views)
     constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[imageView]-[infoLabel]-|", metrics: nil, views: views)
+    
     constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[imageView]-|", metrics: nil, views: views)
-    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:[streetNameLabel(20)]-[infoLabel]-|", metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[streetNameLabel]-[infoLabel]-|", metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[streetNumberLabel]-[infoLabel]", metrics: nil, views: views)
     
     NSLayoutConstraint.activate(constraints)
   }

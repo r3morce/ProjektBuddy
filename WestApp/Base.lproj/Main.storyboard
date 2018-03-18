@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fXh-Dl-hzJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -36,24 +36,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="cl9-xN-phr">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2o-A7-YcQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
                                         <state key="normal" title="Presence Button"/>
                                         <connections>
                                             <action selector="openLoginViewController:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Rzg-h1-xF9"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXM-9W-UhM" userLabel="Report Button">
-                                        <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
+                                        <rect key="frame" x="0.0" y="201" width="375" height="201"/>
                                         <state key="normal" title="Photo Documentation Button"/>
                                         <connections>
                                             <action selector="openReportViewController:" destination="9pv-A4-QxB" eventType="touchUpInside" id="qRv-Wn-DfJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdX-9S-SSZ">
-                                        <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
+                                        <rect key="frame" x="0.0" y="402" width="375" height="201"/>
                                         <state key="normal" title="Contact Button"/>
                                         <connections>
                                             <segue destination="K9C-UQ-e6S" kind="show" identifier="showContactViewController" id="i43-MP-gJM"/>
@@ -72,7 +72,13 @@
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
-                    <navigationItem key="navigationItem" id="1ni-EN-GPE"/>
+                    <navigationItem key="navigationItem" id="1ni-EN-GPE">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="organize" id="vdt-4d-GN0">
+                            <connections>
+                                <segue destination="8rJ-Kc-sve" kind="show" id="0OA-Yy-FlL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contactButton" destination="IdX-9S-SSZ" id="eAD-JP-60Z"/>
                         <outlet property="photoDocumentationButton" destination="WXM-9W-UhM" id="WPb-MM-TVN"/>
@@ -94,7 +100,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l20-EU-d8F">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="553.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQK-4z-mNo">
                                         <rect key="frame" x="8" y="0.0" width="359" height="184.5"/>
@@ -104,7 +110,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ck-2H-jxk">
-                                        <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
+                                        <rect key="frame" x="0.0" y="184.5" width="375" height="184.5"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="4" id="74v-fL-Hvv"/>
                                         </constraints>
@@ -114,7 +120,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnN-YE-o71">
-                                        <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
+                                        <rect key="frame" x="0.0" y="369" width="375" height="184.5"/>
                                         <state key="normal" title="Button"/>
                                     </button>
                                 </subviews>
@@ -153,16 +159,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CDW-uc-EJp">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CDW-uc-EJp" id="4VY-o6-ixx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="K9C-UQ-e6S" id="H2s-tf-cD7"/>
                             <outlet property="delegate" destination="K9C-UQ-e6S" id="jkW-JM-OrV"/>
@@ -171,7 +167,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oP-Hu-Cqq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2750" y="298"/>
+            <point key="canvasLocation" x="2750" y="384"/>
         </scene>
         <!--Report Selection View Controller-->
         <scene sceneID="EKF-aT-H6Z">
@@ -182,31 +178,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="vZj-Xg-n41">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GFN-lG-lGZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="138.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="reportProgress:" destination="jGx-th-YUN" eventType="touchUpInside" id="UTm-CH-Mfg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBg-rF-mY6">
-                                        <rect key="frame" x="0.0" y="138.5" width="375" height="138.5"/>
+                                        <rect key="frame" x="0.0" y="151" width="375" height="150.5"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="needTechnican:" destination="jGx-th-YUN" eventType="touchUpInside" id="5zy-SG-fJI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IbQ-tb-2Vm" userLabel="Surveyor Button">
-                                        <rect key="frame" x="0.0" y="277" width="375" height="138.5"/>
+                                        <rect key="frame" x="0.0" y="301.5" width="375" height="151"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="needSurveyor:" destination="jGx-th-YUN" eventType="touchUpInside" id="Huz-9G-kIg"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQf-0l-Fpf">
-                                        <rect key="frame" x="0.0" y="415.5" width="375" height="138.5"/>
+                                        <rect key="frame" x="0.0" y="452.5" width="375" height="150.5"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="finishedContructionSite:" destination="jGx-th-YUN" eventType="touchUpInside" id="8rF-NO-HWV"/>
@@ -255,16 +251,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="k21-R0-Pvt">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CbU-FP-m0a">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="184.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTx-NN-siP">
-                                        <rect key="frame" x="0.0" y="184.5" width="375" height="185"/>
+                                        <rect key="frame" x="0.0" y="201" width="375" height="201"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8aK-OC-hgW">
-                                                <rect key="frame" x="8" y="4" width="359" height="177"/>
+                                                <rect key="frame" x="8" y="4" width="359" height="193"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -279,7 +275,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEK-Hd-dZC">
-                                        <rect key="frame" x="0.0" y="369.5" width="375" height="184.5"/>
+                                        <rect key="frame" x="0.0" y="402" width="375" height="201"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="send:" destination="Rbc-G6-CES" eventType="touchUpInside" id="zX0-9C-fdb"/>
@@ -314,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRj-Bt-aZN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3895.1999999999998" y="-461.01949025487261"/>
+            <point key="canvasLocation" x="3503" y="-462"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -324,8 +320,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-4f-GDZ">
-                                <rect key="frame" x="194" y="108" width="46" height="33"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-4f-GDZ">
+                                <rect key="frame" x="164.5" y="350.5" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="sendSMS:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="adM-JP-0i7"/>
@@ -343,25 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="804" y="298.2008995502249"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="fXh-Dl-hzJ" kind="relationship" relationship="viewControllers" id="4FY-2X-Kob"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="1529" y="428"/>
         </scene>
     </scenes>
     <resources>
