@@ -122,6 +122,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnN-YE-o71">
                                         <rect key="frame" x="0.0" y="369" width="375" height="184.5"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="selectConstructionSite:" destination="VYe-v1-om3" eventType="touchUpInside" id="ISY-jJ-Giw"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

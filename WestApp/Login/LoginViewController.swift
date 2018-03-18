@@ -29,7 +29,8 @@ class LoginViewController: UIViewController {
   @IBOutlet weak var chooseConstructionSiteButton: UIButton! {
     didSet {
       chooseConstructionSiteButton.setTitle("Andere Baustelle auswählen", for: .normal)
-    chooseConstructionSiteButton.setTitleColor(Configuration.Colors.white, for: .normal)
+      chooseConstructionSiteButton.titleLabel?.font = Configuration.Fonts.button
+      chooseConstructionSiteButton.setTitleColor(Configuration.Colors.white, for: .normal)
       chooseConstructionSiteButton.backgroundColor = Configuration.Colors.yellow
     }
   }
@@ -46,10 +47,11 @@ class LoginViewController: UIViewController {
   
   // MARK: - Lifecycle
   
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
+  override func viewDidLoad() {
     
-    let adress = ConstructionSite.Adress(streetName: "Teststrasse", streetNumber: "2b", zipCode: "54478", cityName: "Essen")
+    navigationController?.navigationBar.tintColor = Configuration.Colors.black
+
+    let adress = ConstructionSite.Adress(streetName: "Mittelstrasse", streetNumber: "2b", zipCode: "66128", cityName: "Saarbrücken-Gersweiler")
     let image = UIImage(named: "construction site")!
     
     let loremIpsum = """
@@ -70,7 +72,7 @@ class LoginViewController: UIViewController {
     let constructionSiteView = ConstructionSiteView(constructionSite: currentConstructionSite)
     constructionSiteView.translatesAutoresizingMaskIntoConstraints = false
     constructionSiteContainerView.addSubview(constructionSiteView)
-
+    
     var constraints: [NSLayoutConstraint] = []
     let views: [String: Any] = ["constructionSiteView": constructionSiteView]
     
@@ -91,5 +93,14 @@ class LoginViewController: UIViewController {
     }
     
     navigationController?.popViewController(animated: true)
+  }
+  
+  @IBAction func selectConstructionSite(_ sender: Any) {
+    
+    let alert = UIAlertController(title: "In Arbeit 🤖", message: "Diese Funktion wird zur Zeit entwickelt", preferredStyle: .alert)
+    
+    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+
+    self.present(alert, animated: true)
   }
 }

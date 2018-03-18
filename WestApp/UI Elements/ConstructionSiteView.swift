@@ -41,6 +41,24 @@ class ConstructionSiteView: UIView {
     }
   }
   
+  private var zipLabel: UILabel! {
+    didSet {
+      zipLabel.translatesAutoresizingMaskIntoConstraints = false
+      
+      zipLabel.font = Configuration.Fonts.title
+      zipLabel.textColor = Configuration.Colors.black
+    }
+  }
+  
+  private var cityLabel: UILabel! {
+    didSet {
+      cityLabel.translatesAutoresizingMaskIntoConstraints = false
+      
+      cityLabel.font = Configuration.Fonts.title
+      cityLabel.textColor = Configuration.Colors.black
+    }
+  }
+  
   private var infoLabel: UILabel! {
     didSet {
       infoLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -57,6 +75,8 @@ class ConstructionSiteView: UIView {
       "imageView": imageView,
       "streetNameLabel": streetNameLabel,
       "streetNumberLabel": streetNumberLabel,
+      "zipLabel": zipLabel,
+      "cityLabel": cityLabel,
       "infoLabel": infoLabel
     ]
   }
@@ -92,6 +112,12 @@ class ConstructionSiteView: UIView {
     
     streetNumberLabel = UILabel()
     addSubview(streetNumberLabel)
+
+    zipLabel = UILabel()
+    addSubview(zipLabel)
+    
+    cityLabel = UILabel()
+    addSubview(cityLabel)
     
     infoLabel = UILabel()
     addSubview(infoLabel)
@@ -99,6 +125,8 @@ class ConstructionSiteView: UIView {
     imageView?.image = constructionSite.image
     streetNameLabel?.text = constructionSite.adress.streetName
     streetNumberLabel.text = constructionSite.adress.streetNumber
+    zipLabel.text = constructionSite.adress.zipCode
+    cityLabel.text = constructionSite.adress.cityName
     infoLabel.text = constructionSite.infoText
     
     constraint()
@@ -108,12 +136,13 @@ class ConstructionSiteView: UIView {
     
     var constraints: [NSLayoutConstraint] = []
     
-    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[imageView(120)]-[streetNameLabel]-[streetNumberLabel(>=20@800)]", options: [.alignAllTop], metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:|-[imageView(120)]-[streetNameLabel]-[streetNumberLabel(>=20@800)]-|", options: [.alignAllTop], metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[imageView]-[zipLabel(>=50@800)]-[cityLabel]-|", metrics: nil, views: views)
     constraints += NSLayoutConstraint.constraints(withVisualFormat: "H:[imageView]-[infoLabel]-|", metrics: nil, views: views)
     
     constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[imageView]-|", metrics: nil, views: views)
-    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[streetNameLabel]-[infoLabel]-|", metrics: nil, views: views)
-    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[streetNumberLabel]-[infoLabel]", metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[streetNameLabel]-[zipLabel]-[infoLabel]-|", metrics: nil, views: views)
+    constraints += NSLayoutConstraint.constraints(withVisualFormat: "V:|-[streetNumberLabel]-[cityLabel]-[infoLabel]", metrics: nil, views: views)
     
     NSLayoutConstraint.activate(constraints)
   }
