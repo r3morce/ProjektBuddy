@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
   
   @IBOutlet weak var acceptButton: UIButton!  {
     didSet {
-      acceptButton.setTitle("Ankuft bestätigen", for: .normal)
+      acceptButton.setTitle(user.isLoggedIn ? "Von Baustelle abmelden" : "Ankuft bestätigen", for: .normal)
       acceptButton.titleLabel?.font = Configuration.Fonts.button
       acceptButton.setTitleColor(Configuration.Colors.white, for: .normal)
       acceptButton.backgroundColor = Configuration.Colors.indigo
@@ -87,7 +87,13 @@ class LoginViewController: UIViewController {
   @IBAction func acceptConstructionSite() {
     
     if let currentConstructionSite = currentConstructionSite {
-      delegate?.didSelect(constructionSite: currentConstructionSite)
+      if user.isLoggedIn {
+        delegate?.didSelect(constructionSite: nil)
+      } else {
+        delegate?.didSelect(constructionSite: currentConstructionSite)
+      }
+      
+      user.isLoggedIn = !user.isLoggedIn
     } else {
       fatalError("No construction site selected")
     }

@@ -33,26 +33,23 @@ class SecondViewController: UIViewController {
     
     let strBase64 = imageData.base64EncodedString(options: .lineLength64Characters)
     
-    let parameters: Parameters = [
-      "text": "test",
-      "image": strBase64,
-      "type": "Todo: Meldungstyp",
-      "incidentDate": "2012-04-23T18:25:43.511Z",
-      "projectId": "Todo",
-      "latitude": "Todo",
-      "longitude": "Todo"
+    let parameters = [
+      "test": "this is my value"
     ]
     
-    Alamofire.request(Configuration.URLs.api).response(completionHandler: { response in
-      print("response: \(response.response)")
-    })
-    
-    
-//    Alamofire.request(Configuration.URLs.api, method: .post, parameters: parameters).response(completionHandler: { response in
-//
-//      print(response.response?.allHeaderFields as Any)
-//      print(response.response?.statusCode as Any)
+//    Alamofire.request(Configuration.URLs.api).response(completionHandler: { response in
+//      print("response: \(response.response)")
 //    })
+    
+    Alamofire.request("https://projektbuddy-e403a.firebaseio.com/test.json", method: .post, parameters: parameters, headers: ["Content-Type": "application/json"]).response(completionHandler: { response in
+
+
+    
+//    Alamofire.request(Configuration.URLs.api, method: .post, parameters: parameters, headers: ["Content-Type": "application/json"]).response(completionHandler: { response in
+
+      print(response.response?.allHeaderFields as Any)
+      print(response.response?.statusCode as Any)
+    })
   }
   
   

@@ -13,10 +13,10 @@ class ContactViewController: UITableViewController {
   
   private var contacts: [Contact] = [
     Contact(name: "Mathias Schmidt", phone: "+0123456789", email: "roteaugen@gmx.net", companyName: "ACME Hacking", role: "Kommune"),
-    Contact(name: "Khai Ho", phone: "+0123456789", email: "khaiho@gmx.net", companyName: "ACME Hacking", role: "Tiefbauer"),
+    Contact(name: "Khai Ho", phone: "+0123456789", email: "khaiho@gmx.net", companyName: "Kurzschluss GmbH", role: "Techniker"),
     Contact(name: "Philipp Designboi", phone: "+0123456789", email: "miomao@gmx.net", companyName: "Apple Headquarters", role: "Vermesser"),
     Contact(name: "Leisure Suit Larry", phone: "+0123456789", email: "peanutbutterlover@gmx.net", companyName: "Lucasarts", role: "Vermesser"),
-    Contact(name: "Mad Max", phone: "+0123456789", email: "desert@gmx.net", companyName: "Selbststädig", role: "Aufmaß"),
+    Contact(name: "Mad Max", phone: "+0123456789", email: "desert@gmx.net", companyName: "Selbstständig", role: "Aufmaß"),
     Contact(name: "Ronald Mc Donald", phone: "+0123456789", email: "peanutbutterlover@aol.de", companyName: "Lucasarts", role: "Systemdienstleister"),
     Contact(name: "Evil Mastermind", phone: "+0123456789", email: "pinkytoe@web.de", companyName: "Worldwide Inc", role: "Systemdienstleister")
   ]

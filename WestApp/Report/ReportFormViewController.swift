@@ -70,7 +70,7 @@ class ReportFormViewController: UIViewController {
     
     let parameters: Parameters = [
       "phone": "+491774437073",
-      "message": textField.text ?? "",
+      "message": String(describing: textField.text) + " // Störung auf Baustelle Mittelstrasse 2b, 66128 Saarbrücken-Gersweiler",
       "key": "c26be6ff8efde65e5fe79e222b79e46d29efa2b5DEQLerDZ1vj5FsrAcFpI9H6Pb"
     ]
     
@@ -79,23 +79,35 @@ class ReportFormViewController: UIViewController {
   
   private func uploadPhoto() {
     
-    let parameters: Parameters = [
-      "text": ""
-//      "image": photo.enco,
-//      "type": "",
-//      "incidentDate": "",
-//      "projectId": "",
-//      "latitude": "",
-//      "longitude": ""
-    ]
+    let alert = UIAlertController(title: "Meldung gesendet.", message: "SMS an Firma Kurzschluss GmbH ist raus.", preferredStyle: .alert)
     
-    Alamofire.request("https://textbelt.com/text", method: .post, parameters: parameters)
+    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+      self.dismiss(animated: true, completion: nil)
+    }))
+    
+    self.present(alert, animated: true)
+    
+    
+    
+    
+//    let parameters: Parameters = [
+//      "text": ""
+////      "image": photo.enco,
+////      "type": "",
+////      "incidentDate": "",
+////      "projectId": "",
+////      "latitude": "",
+////      "longitude": ""
+//    ]
+//
+//    Alamofire.request("https://textbelt.com/text", method: .post, parameters: parameters)
   }
   
   // MARK: - IBActions
   
   @IBAction func send(_ sender: Any) {
     sendSMS()
+    uploadPhoto()
     
   }
 }

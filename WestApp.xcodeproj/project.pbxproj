@@ -26,6 +26,7 @@
 		C720F3C1205D8B22008B4BC1 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C0205D8B22008B4BC1 /* Contact.swift */; };
 		C720F3C4205D98FC008B4BC1 /* ReportSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C3205D98FC008B4BC1 /* ReportSelectionViewController.swift */; };
 		C720F3C6205DA0E8008B4BC1 /* ReportFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C5205DA0E8008B4BC1 /* ReportFormViewController.swift */; };
+		C720F3C8205E729A008B4BC1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C720F3C7205E729A008B4BC1 /* User.swift */; };
 		D0306DCA746A2C3FCADB14C4 /* Pods_WestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2960B6D73652F7DB9588A84E /* Pods_WestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +80,7 @@
 		C720F3C0205D8B22008B4BC1 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		C720F3C3205D98FC008B4BC1 /* ReportSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSelectionViewController.swift; sourceTree = "<group>"; };
 		C720F3C5205DA0E8008B4BC1 /* ReportFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportFormViewController.swift; sourceTree = "<group>"; };
+		C720F3C7205E729A008B4BC1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				C720F3BD205D8A23008B4BC1 /* Contact */,
 				C720F37F205D312B008B4BC1 /* SecondViewController.swift */,
 				C720F3AB205D34CE008B4BC1 /* Configuration.swift */,
+				C720F3C7205E729A008B4BC1 /* User.swift */,
 			);
 			path = WestApp;
 			sourceTree = "<group>";
@@ -551,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C720F3C8205E729A008B4BC1 /* User.swift in Sources */,
 				C720F3C6205DA0E8008B4BC1 /* ReportFormViewController.swift in Sources */,
 				C720F3B4205D61AE008B4BC1 /* LoginViewController.swift in Sources */,
 				C720F3BA205D62B7008B4BC1 /* ConstructionSite.swift in Sources */,

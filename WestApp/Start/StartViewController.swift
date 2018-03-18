@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 protocol ConstructionSiteDelegate {
-  func didSelect(constructionSite: ConstructionSite)
+  func didSelect(constructionSite: ConstructionSite?)
 }
 
 class StartViewController: UIViewController {
@@ -53,7 +53,7 @@ class StartViewController: UIViewController {
     didSet {
       
       if let adress = currentConstructionSite?.adress {
-      let text = "\(adress.streetName) \(adress.streetNumber)\n\(adress.zipCode) \(adress.cityName)"
+        let text = "Sie sind aktuell auf folgender Baustelle eingeloggt:\n\n\(adress.streetName) \(adress.streetNumber)\n\(adress.zipCode) \(adress.cityName)"
         presenceButton.setTitle(text, for: .normal)
       } else {
         presenceButton.setTitle("Ankunft", for: .normal)
@@ -135,7 +135,7 @@ class StartViewController: UIViewController {
 
 extension StartViewController: ConstructionSiteDelegate {
   
-  func didSelect(constructionSite: ConstructionSite) {
+  func didSelect(constructionSite: ConstructionSite?) {
     self.currentConstructionSite = constructionSite
   }
 }
