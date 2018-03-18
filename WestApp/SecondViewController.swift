@@ -43,12 +43,16 @@ class SecondViewController: UIViewController {
       "longitude": "Todo"
     ]
     
-    
-    Alamofire.request(Configuration.URLs.api, method: .post, parameters: parameters).response(completionHandler: { response in
-      
-      print(response.response?.allHeaderFields as Any)
-      print(response.response?.statusCode as Any)
+    Alamofire.request(Configuration.URLs.api).response(completionHandler: { response in
+      print("response: \(response.response)")
     })
+    
+    
+//    Alamofire.request(Configuration.URLs.api, method: .post, parameters: parameters).response(completionHandler: { response in
+//
+//      print(response.response?.allHeaderFields as Any)
+//      print(response.response?.statusCode as Any)
+//    })
   }
   
   
