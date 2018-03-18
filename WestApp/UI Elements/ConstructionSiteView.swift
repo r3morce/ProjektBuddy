@@ -28,7 +28,7 @@ class ConstructionSiteView: UIView {
       streetNameLabel.translatesAutoresizingMaskIntoConstraints = false
       
       streetNameLabel.font = Configuration.Fonts.title
-      streetNameLabel.textColor = Configuration.Colors.black
+      streetNameLabel.textColor = Configuration.Colors.white
     }
   }
   
@@ -37,7 +37,7 @@ class ConstructionSiteView: UIView {
       streetNumberLabel.translatesAutoresizingMaskIntoConstraints = false
       
       streetNumberLabel.font = Configuration.Fonts.title
-      streetNumberLabel.textColor = Configuration.Colors.black
+      streetNumberLabel.textColor = Configuration.Colors.white
     }
   }
   
@@ -46,7 +46,7 @@ class ConstructionSiteView: UIView {
       zipLabel.translatesAutoresizingMaskIntoConstraints = false
       
       zipLabel.font = Configuration.Fonts.title
-      zipLabel.textColor = Configuration.Colors.black
+      zipLabel.textColor = Configuration.Colors.white
     }
   }
   
@@ -55,7 +55,7 @@ class ConstructionSiteView: UIView {
       cityLabel.translatesAutoresizingMaskIntoConstraints = false
       
       cityLabel.font = Configuration.Fonts.title
-      cityLabel.textColor = Configuration.Colors.black
+      cityLabel.textColor = Configuration.Colors.white
     }
   }
   
@@ -63,7 +63,7 @@ class ConstructionSiteView: UIView {
     didSet {
       infoLabel.translatesAutoresizingMaskIntoConstraints = false
       
-      infoLabel.textColor = Configuration.Colors.black
+      infoLabel.textColor = Configuration.Colors.white
       
       infoLabel.numberOfLines = 0
       infoLabel.lineBreakMode = .byWordWrapping

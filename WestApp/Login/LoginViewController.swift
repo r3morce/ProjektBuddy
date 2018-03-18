@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
       acceptButton.setTitle(user.isLoggedIn ? "Von Baustelle abmelden" : "Ankuft bestätigen", for: .normal)
       acceptButton.titleLabel?.font = Configuration.Fonts.button
       acceptButton.setTitleColor(Configuration.Colors.white, for: .normal)
-      acceptButton.backgroundColor = Configuration.Colors.indigo
+      acceptButton.backgroundColor = Configuration.Colors.purple
     }
   }
   
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
       chooseConstructionSiteButton.setTitle("Andere Baustelle auswählen", for: .normal)
       chooseConstructionSiteButton.titleLabel?.font = Configuration.Fonts.button
       chooseConstructionSiteButton.setTitleColor(Configuration.Colors.white, for: .normal)
-      chooseConstructionSiteButton.backgroundColor = Configuration.Colors.yellow
+      chooseConstructionSiteButton.backgroundColor = Configuration.Colors.indigo
     }
   }
   
@@ -52,10 +52,10 @@ class LoginViewController: UIViewController {
     navigationController?.navigationBar.tintColor = Configuration.Colors.black
 
     let adress = ConstructionSite.Adress(streetName: "Mittelstrasse", streetNumber: "2b", zipCode: "66128", cityName: "Saarbrücken-Gersweiler")
-    let image = UIImage(named: "construction site")!
+    let image = UIImage(named: "demo site")!
     
     let loremIpsum = """
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed d
+    Beginn am: 01. März 2018\nEnde am: 27. April 2018\nBaustelle für neues Kabel in der Mittelstrasse 2b, 66128 Saarbrücken-Gersweiler.
     """
     
     currentConstructionSite = ConstructionSite(adress: adress, image: image, infoText: loremIpsum)
@@ -71,6 +71,7 @@ class LoginViewController: UIViewController {
     
     let constructionSiteView = ConstructionSiteView(constructionSite: currentConstructionSite)
     constructionSiteView.translatesAutoresizingMaskIntoConstraints = false
+    constructionSiteView.backgroundColor = Configuration.Colors.yellow
     constructionSiteContainerView.addSubview(constructionSiteView)
     
     var constraints: [NSLayoutConstraint] = []

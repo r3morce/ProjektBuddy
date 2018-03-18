@@ -70,7 +70,7 @@ class ReportFormViewController: UIViewController {
     
     let parameters: Parameters = [
       "phone": "+491774437073",
-      "message": String(describing: textField.text) + " // Störung auf Baustelle Mittelstrasse 2b, 66128 Saarbrücken-Gersweiler",
+      "message": textField.text! + " // Störung auf Baustelle Mittelstrasse 2b, 66128 Saarbrücken-Gersweiler",
       "key": "c26be6ff8efde65e5fe79e222b79e46d29efa2b5DEQLerDZ1vj5FsrAcFpI9H6Pb"
     ]
     
@@ -82,7 +82,7 @@ class ReportFormViewController: UIViewController {
     let alert = UIAlertController(title: "Meldung gesendet.", message: "SMS an Firma Kurzschluss GmbH ist raus.", preferredStyle: .alert)
     
     alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
-      self.dismiss(animated: true, completion: nil)
+      self.navigationController?.popToRootViewController(animated: true)
     }))
     
     self.present(alert, animated: true)
