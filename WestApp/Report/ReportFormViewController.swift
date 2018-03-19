@@ -69,7 +69,7 @@ class ReportFormViewController: UIViewController {
   private func sendSMS() {
     
     let parameters: Parameters = [
-      "phone": "+491774437073",
+      "phone": "+491123456789",
       "message": textField.text! + " // Störung auf Baustelle Mittelstrasse 2b, 66128 Saarbrücken-Gersweiler",
       "key": "c26be6ff8efde65e5fe79e222b79e46d29efa2b5DEQLerDZ1vj5FsrAcFpI9H6Pb"
     ]
